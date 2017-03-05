@@ -1,0 +1,58 @@
+<ion-view>
+  <ion-content class="padding post">
+    <div class="bar bar-header post-header">
+      <h3 class="title title-left">{{post[0].title}}</h3>
+      <div class="buttons buttons-right header-item">
+        <span class="right-buttons">
+          <button class="button-clear" ng-click="myGoBack()">
+            <i class="ion-close"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+    <div class="padding">
+      <div class="image-wrap">
+        <img class="main" ng-src="{{post[0].featured_image.attachment_meta.sizes['premium-post-image'].url}}" style="width:100%">
+        <div class="price-wrap">
+            <h3 class="price" ng-show="post[0].post_meta.type!='auction' && post[0].post_meta.price!='Обмен'">{{post[0].post_meta.price}}</h3>
+            <h3 class="label auction" ng-show="post[0].post_meta.type=='auction'">Аукцион <span ng-show="post[0].post_meta.expired">завершён</span></h3>
+            <h3 class="label obmen" ng-show="post[0].post_meta.type!='auction' && post[0].post_meta.price=='Обмен'">Обмен</h3>
+        </div>
+      </div>
+      <div class="list">
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <div class="tab-item author">
+            {{post[0].author.first_name+" "+post[0].author.last_name}}
+          </div>
+          <a class="tab-item phone-button" href="tel:{{post[0].post_meta.user_phone}}">
+            <i class="icon ion-ios-telephone"></i> {{post[0].post_meta.user_phone}}
+          </a>
+        </div>
+        <div ng-show="post[0].post_meta.type=='auction'">
+          <div class="item">
+            Блиц-цена
+            <span class="badge badge-stable">{{post[0].post_meta.price}}</span>
+          </div>
+          <div class="item">
+            Ставок на аукционе
+            <span class="badge badge-stable">{{post[0].post_meta.bets_count}}</span>
+          </div>
+          <div class="item">
+            Текущая цена
+            <span class="badge badge-stable">{{post[0].post_meta.current_price}}</span>
+          </div>
+          <div class="item">
+            Дата завершения
+            <span class="badge badge-stable">{{post[0].post_meta.expire_date}}</span>
+          </div>
+        </div>
+        <div class="item" ng-repeat="field in post[0].post_meta.custom_fields">
+          {{field[0]}}
+          <span class="badge badge-stable">{{field[1]}}</span>
+        </div>
+        <div class="item item-body" ng-bind-html="post[0].content">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

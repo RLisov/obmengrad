@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-search" ng-click="show_search()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="bar bar-header item-input-inset ng-cloak" ng-show="display_search">
+      <ion-search class="search_input" placeholder="Поиск по объявлениям" filter="search"></ion-search>
+      <button class="button button-clear button-dark" ng-click="search.value = ''; hide_search()">Отменить</button>
+    </div>
+    <ion-list>
+      <div class="bar-header categories" ion-affix data-affix-within-parent-with-class="list">
+        <a class="button button-clear button-dark category-7" href="#/tab/posts/category/7">Недвижимость</a>
+        <a class="button button-clear button-dark category-228" href="#/tab/posts/category/228">Для Бизнеса</a>
+      </div>
+      <ion-item class="item-avatar" ng-repeat="post in posts | filter:search.value" type="item-text-wrap" href="#/tab/posts/{{post.ID}}">
+        <img ng-src="{{post.featured_image.attachment_meta.sizes['single-cat-image'].url}}">
+        <h2>{{post.title}}</h2>
+        <h3 class="price" ng-show="{{post.post_meta.type!='auction' && post.post_meta.price!='Обмен'}}">{{post.post_meta.price}}</h3>
+        <h3 class="label auction" ng-show="{{post.post_meta.type=='auction'}}">Аукцион</h3>
+        <h3 class="label obmen" ng-show="{{post.post_meta.type!='auction' && post.post_meta.price=='Обмен'}}">Обмен</h3>
+        <p class="category">{{post.terms.category[0].name}}</p>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,300 @@
+@import "../fonts/lato.css";
+@import "../fonts/raleway.css";
+
+/* Empty. Add your own CSS if you like */
+
+body {
+	font-family: "Raleway Regular";
+	color: #454545;
+}
+
+.has-tabs, .bar-footer.has-tabs {
+  bottom: 0px;
+}
+
+/*.has-tabs-top {
+	top: 44px;
+}*/
+
+.tabs-top > .tabs, .tabs.tabs-top {
+  top: 0px;
+}
+
+.tabs {
+	height: 0px;
+}
+
+.tabs.tabs-secondary {
+	height: inherit;
+}
+
+.item-complex .item-content {
+	padding: 16px;
+}
+
+.item-avatar .item-content {
+	padding-left: 150px;
+	min-height: 140px;
+}
+
+.item-avatar .item-content > img:first-child {
+	max-width: 117px;
+	max-height: 100px;
+	border-radius: 0;
+}
+
+.item h2, .item p {
+	white-space: normal;
+}
+
+.item h2 {
+	font-family: "Raleway Regular";
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+
+.item p {
+	font-weight: 300;
+	line-height: 16px;
+}
+
+.item .category {
+	font-family: "Raleway Light";	
+}
+
+.item .price {
+	font-family: "Raleway Bold";
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.item .price, .item .label {
+	margin-top: 10px;
+}
+
+.item .label {
+	font-family: "Raleway Bold";
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block;
+	padding: 5px;
+}
+
+.item .label.auction {
+	background-color: #e2b25a;
+}
+
+.item .label.obmen {
+	background-color: #b9d29c;
+}
+
+.bar-blue {
+	background-color: #21aefe;
+	color: white;
+}
+
+.bar-blue .button {
+	color: white;
+}
+
+.nav-bar-title img {
+	width: 120px;
+	margin-left: 30px;
+}
+
+.item-input-inset {
+	background-color: #ebe9e8;
+	transition: .1s linear all;
+	height: 44px;
+}
+
+.item-input-inset.ng-hide {
+	height: 0px;
+}
+
+.search-wrapper-light {
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    background: none;
+    border-radius: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.item-input-wrapper {
+	background-color: #ffffff;
+}
+
+.search-wrapper-light input, .search-wrapper-light input::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+.post .post-header {
+	padding: 0;
+	margin: 5px;
+	border-bottom: 1px solid #eee;
+	position: relative;
+	width: 95%;
+}
+
+.post .post-header h3 {
+	margin: 0;
+}
+
+.post .post-header .buttons {
+	right: -5px;
+}
+
+.post .image-wrap {
+	position: relative;
+}
+
+.post .price-wrap {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 9;
+}
+
+.post .price-wrap h3 {
+	font-family: "Raleway Bold";
+	color: white;
+	background-color: #21aefe;
+	padding: 5px;
+	font-size: 16px
+}
+
+.post .phone-button {
+	color: white;
+	background: #21aefe !important;
+}
+
+.tabs-icon-left.tabs .tab-item {
+	font-size: 14px;
+}
+
+.post .author {
+	color: black;
+	font-weight: 500;
+}
+
+.post .tab-item {
+	line-height: 40px;
+}
+
+.post .list .item.tabs {
+	margin-bottom: 10px;
+}
+
+.post .list .item {
+	border: none;
+}
+
+.post .title {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.post .item-body p:first-child {
+	margin-top: 0px;
+}
+
+.post .item-body {
+	background-color: #F2F2F2;
+}
+
+.post .item p {
+	font-family: "Lato Regular";
+	color: #888888;
+}
+
+.bar-footer.post .tab-item {
+	font-size: 1em;
+}
+
+.categories {
+	background-color: #e2e1e1;
+	height: auto;
+}
+
+.categories a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1.5em;
+	max-height: inherit;
+	line-height: 2em;
+	text-transform: uppercase;
+}
+
+.categories a:after {
+	height: 2px;
+	width: 100px;
+	margin: 50px auto;
+}
+
+.categories a.category-7:after {
+	background-color: #eb7a7a;
+}
+
+.categories a.category-228:after {
+	background-color: #90c8d9;
+}
+
+.categories.category a {
+	color: white;
+}
+
+.categories .subcategories {
+	background-color: #f2f2f2;
+	overflow: scroll;
+}
+
+.categories .subcategories a {
+	font-family: "Lato Medium";
+	font-size: 14px;
+	text-transform: none;
+	text-decoration: none;
+	font-weight: 100;
+	padding: 5px 20px;
+	display: inline;
+	color: #000000;
+	word-wrap: normal;
+
+}
+
+.wide-as-need {
+	overflow: scroll;
+  	white-space: nowrap;
+}
+
+.scroll { 
+  min-width: 100%;
+}
+
+.category-7 {
+	background-color: #90c8d9;
+}
+
+.category-7 .subcategories a.active {
+	color: #90c8d9;
+}
+
+.category-228 {
+	background-color: #eb7a7a;
+}
+
+.category-228 .subcategories a.active {
+	color: #eb7a7a;
+}
+
+.list {
+	padding-top: 0px;
+}
+
+.post img.main {
+	margin-bottom: 20px;
+}
